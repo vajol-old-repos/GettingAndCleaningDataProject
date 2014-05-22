@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Getting And Cleaning Data Project</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Getting And Cleaning Data Project</h1>
+
+<h2>Human Activity Recognition Using Smartphones Analysis</h2>
+
+<p>The R Script &ldquo;run_analysis.R&rdquo; uses the data from the &ldquo;Human Activity Recognition Using Smartphones Data Set&rdquo; and produces a new, tidy dataset, which is then used for further analysis. </p>
+
+<p>Previously mentioned data set, can be found by using this url:</p>
+
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">Human Activity Recognition Data Set</a></p>
+
+<h2>How the script &ldquo;run_analysis.R&rdquo; works</h2>
+
+<p>Here is a list of steps (operations and transformations) performed on the raw data sets:</p>
+
+<ul>
+<li>Download two sets (test and train) of files by using a temporary file to unzip all the files</li>
+<li>Download features (column names) and activity labels files</li>
+<li>Load all files into program variables</li>
+<li>Add column names to activity labels table</li>
+<li>Convert factor values to character for easier manipulation</li>
+<li>Document when the files have been downloaded</li>
+<li>Remove special signs from column names</li>
+<li>Make variable names stand out by using mixed case</li>
+<li>Bind together test data sets: activities + subjects + features</li>
+<li>Bind together train data sets: activities + subjects + features</li>
+<li>Merge (APPEND) together both data sets: test + train</li>
+<li>Add column names to the new data set (using file &ldquo;features.txt&rdquo;)</li>
+<li>Merge activity labels set with features to produce the complete set with descriptive names for activities</li>
+<li>Extract only measurements on the mean and standard deviation</li>
+<li>Bind together and create final set with columns on the mean and standard deviation, subjects and activities</li>
+<li>Create melted data set with descriptive activity names</li>
+<li>Cast the melted dataset according calculating average value for each variable, per subject and activity</li>
+<li>Create final data file with the tidy dataset</li>
+</ul>
+
+</body>
+
+</html>
+
